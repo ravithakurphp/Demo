@@ -1,0 +1,80 @@
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+		<script src="login_js.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="login_css.css">
+
+    <script>
+
+/*
+Submit Once form validation- 
+(c) Dynamic Drive (www.dynamicdrive.com)
+For full source code, usage terms, and 100's more DHTML scripts, visit http://dynamicdrive.com
+*/
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</script>
+
+  </head>
+    <body>
+
+      <form method="get" action="#"  >
+      
+        <h1>Sign Up</h1>
+        
+        <fieldset>
+        <legend><span class="number">1</span>Your basic info</legend>
+          
+          <label for="name" style="display: inline;" >FullName:</label><p id="errn"style="display: inline;"></p>
+          <input type="text" id="name" name="user_name" required="required" pattern="+$\[a-zA-Z]+" onkeyup="document.getElementById('errn').innerHTML=''" autofocus><br><br>
+	
+          <label for="email" style="display: inline;">Email:</label><p id="erre"style="display: inline;"></p>
+          <input type="email"   onfocus="vn()" id="email" required="required" onkeyup="document.getElementById('erre').innerHTML=''"><br><br>
+        <br />
+          <!--<input type="email" id="email" name="user_email"><br><br>-->
+          <!--<input type="text" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+com)*$/" required>-->
+          
+          <label for="password" style="display: inline;">Password:</label><p id="errps" style="display: inline;"></p>
+          <input type="password" onfocus="vn(); ve();" id="password" name="user_password" onkeyup="document.getElementById('errps').innerHTML=''"><br><br>
+
+          <label for="number" style="display: inline;">Mobile No.:</label><p id="errph"style="display: inline;"></p>
+          <!--<script>src="phoneno-all-numeric-validation.js"</script>
+          <input type="number" id="num" name="mo_num" maxlength="10" size="10" required="required" pattern="[0-9]{10}+"><br><br>-->
+          <input type="text" id="tel" onfocus="vn();ve();vpa();" name="mobile" pattern="^(?:(?:\+|0{0,2})(\s*[\-]\s*)?|[0]?)?[3456789]\d{9}$" title="Enter 10 digit Valid mobile number" required onkeyup="document.getElementById('errph').innerHTML=''">
+          
+          <label>Gender:</label>
+          <select onfocus="vn();ve();vpa();vph();">
+            <option value="male">Male</option>
+			<option value="female">Female</option>
+        </select><br><br>
+        </fieldset>
+
+        <fieldset>
+        <legend><span class="number">2</span>Your Profile</legend>       
+        
+        
+        <label for="radio">Experience:</label>
+		<input type="radio" id="a" name="a" value="1yer" required="required"><label for="a">0-1 years</label>
+		<input type="radio" id="b" name="a" value="2yer" required="required"><label for="b">1-2 years</label>
+		<input type="radio" id="c" name="a" value="3yer" required="required"><label for="c">2-5 years</label>
+		<input type="radio" id="d" name="a" value="4yer" required="required"><label for="d">5-7 years</label><br><br>
+        
+        
+        <label>Interests:</label><br>
+        <input type="checkbox" id="development" value="interest_development" name="user_interest"  ><label class="light" for="development">Development</label><br>
+        <input type="checkbox" id="design" value="interest_design" name="user_interest" ><label class="light" for="design">Design</label><br>
+        <input type="checkbox" id="business" value="interest_business" name="user_interest" ><label class="light" for="business">Business</label><br>
+        <input type="checkbox" id="support" value="interest_support" name="user_interest" ><label class="light" for="support">Support</label>
+        
+        </fieldset>
+        <button type="submit" onclick="validate()" onSubmit="submitonce(this)" >Sign Up</button>
+      </form>
+
+
+
+    </body>
+</html>
